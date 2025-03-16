@@ -34,7 +34,7 @@ export default function Skills() {
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold mb-4">Skills</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Technical skills I've developed throughout my academic and project experiences.
+          Technical skills I&apos;ve developed throughout my academic and project experiences.
         </p>
       </div>
 

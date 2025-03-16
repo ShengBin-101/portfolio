@@ -1,19 +1,38 @@
 "use client"
 
-import { useState } from "react"
+import { JSX, useState } from "react"
 import { ArrowUpRight, Github, BookOpen, Ship, BotIcon as Robot, Cpu, Monitor } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import ProjectModal from "@/components/project-modal"
+import Image from "next/image"
+
+// Define a custom Project interface for your portfolio
+interface PortfolioProject {
+  title: string
+  description: string
+  longDescription: string
+  images: { src: string; alt: string }[]
+  category: string
+  completedDate?: string
+  tags: string[]
+  codeUrl?: string
+  demoUrl?: string
+  infoUrl?: string
+  videoUrl?: string
+  newsUrl?: string
+  icon: JSX.Element
+}
 
 export default function Projects() {
   const categories = ["All", "Ongoing", "Completed"]
   const [activeCategory, setActiveCategory] = useState("All")
-  const [selectedProject, setSelectedProject] = useState(null)
+  const [selectedProject, setSelectedProject] = useState<PortfolioProject | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const projects = [
+  // Ensure the projects array uses the PortfolioProject type
+  const projects: PortfolioProject[] = [
     {
       title: "Gitbook 📚",
       description:
@@ -58,7 +77,7 @@ export default function Projects() {
       `,
       images: [
         { src: "/project_images/mellow_dashboard.png", alt: "Mellow Dashboard" },
-        { src: "/project_images/mellow_chatbot.png", alt: "Mellow Chatbot Interface" },
+        // { src: "/project_images/mellow_chatbot.png", alt: "Mellow Chatbot Interface" },
       ],
       category: "Completed",
       completedDate: "March 2025",
@@ -85,8 +104,8 @@ export default function Projects() {
       `,
       images: [
         { src: "/project_images/DroneGuard_Team.avif", alt: "DroneGuard Team Photo" },
-        { src: "/project_images/DroneGuard_Interface.png", alt: "DroneGuard Web Interface" },
-        { src: "/project_images/DroneGuard_Detection.png", alt: "Drone Detection Visualization" },
+        // { src: "/project_images/DroneGuard_Interface.png", alt: "DroneGuard Web Interface" },
+        // { src: "/project_images/DroneGuard_Detection.png", alt: "Drone Detection Visualization" },
       ],
       category: "Completed",
       completedDate: "February 2025",
@@ -178,9 +197,9 @@ export default function Projects() {
       `,
       images: [
         { src: "/project_images/Hornet9.gif", alt: "Hornet 9.0 AUV" },
-        { src: "/placeholder.svg?height=600&width=800", alt: "Underwater testing" },
-        { src: "/placeholder.svg?height=600&width=800", alt: "Vision system output" },
-        { src: "/placeholder.svg?height=600&width=800", alt: "Team working on the AUV" },
+        // { src: "/placeholder.svg?height=600&width=800", alt: "Underwater testing" },
+        // { src: "/placeholder.svg?height=600&width=800", alt: "Vision system output" },
+        // { src: "/placeholder.svg?height=600&width=800", alt: "Team working on the AUV" },
       ],
       category: "Completed",
       completedDate: "April 2024",
@@ -257,8 +276,8 @@ export default function Projects() {
       `,
       images: [
         { src: "/project_images/mbot.gif", alt: "mBot robot" },
-        { src: "/placeholder.svg?height=600&width=800", alt: "Maze setup" },
-        { src: "/placeholder.svg?height=600&width=800", alt: "Robot navigating the maze" },
+        // { src: "/placeholder.svg?height=600&width=800", alt: "Maze setup" },
+        // { src: "/placeholder.svg?height=600&width=800", alt: "Robot navigating the maze" },
       ],
       category: "Completed",
       completedDate: "November 2023",
@@ -284,8 +303,8 @@ export default function Projects() {
       `,
       images: [
         { src: "/project_images/ITS.gif", alt: "Traffic junction setup" },
-        { src: "/placeholder.svg?height=600&width=800", alt: "Object detection visualization" },
-        { src: "/placeholder.svg?height=600&width=800", alt: "System architecture diagram" },
+        // { src: "/placeholder.svg?height=600&width=800", alt: "Object detection visualization" },
+        // { src: "/placeholder.svg?height=600&width=800", alt: "System architecture diagram" },
       ],
       category: "Completed",
       completedDate: "October 2020",
@@ -311,8 +330,8 @@ export default function Projects() {
       `,
       images: [
         { src: "/project_images/lego_opencv.gif", alt: "Lego brick detection results" },
-        { src: "/placeholder.svg?height=600&width=800", alt: "Image processing steps" },
-        { src: "/placeholder.svg?height=600&width=800", alt: "Web interface" },
+        // { src: "/placeholder.svg?height=600&width=800", alt: "Image processing steps" },
+        // { src: "/placeholder.svg?height=600&width=800", alt: "Web interface" },
       ],
       category: "Completed",
       completedDate: "October 2020",
@@ -349,7 +368,8 @@ export default function Projects() {
   const filteredProjects =
     activeCategory === "All" ? projects : projects.filter((project) => project.category === activeCategory)
 
-  const openProjectModal = (project) => {
+  // Update the openProjectModal function to use the correct type
+  const openProjectModal = (project: PortfolioProject) => {
     setSelectedProject(project)
     setIsModalOpen(true)
   }
@@ -390,10 +410,12 @@ export default function Projects() {
             {/* Thumbnail */}
             <div className="relative h-48 w-full overflow-hidden bg-muted flex items-center justify-center">
               {project.images && project.images.length > 0 ? (
-                <img
+                <Image
                   src={project.images[0].src}
                   alt={project.images[0].alt}
-                  className="object-cover w-full h-full"
+                  layout="fill" // Ensures the image fills the container
+                  objectFit="cover" // Ensures the image maintains aspect ratio and covers the container
+                  priority={index === 0} // Optionally prioritize the first image for faster loading
                 />
               ) : (
                 project.icon

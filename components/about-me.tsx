@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Instagram, Youtube } from "lucide-react"
+import { Github, Linkedin, Youtube } from "lucide-react"
 
 export default function AboutMe() {
   return (
@@ -10,11 +10,11 @@ export default function AboutMe() {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="order-2 md:order-1">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Hi, I'm <span className="text-primary">Sheng Bin</span>
+            Hi, I&apos;m <span className="text-primary">Sheng Bin</span>
           </h1>
           <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground mb-6">Software Engineer | Student</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Hey there! I'm a Computer Engineering undergraduate student at National University of Singapore (NUS).
+            Hey there! I&apos;m a Computer Engineering undergraduate student at National University of Singapore (NUS).
           </p>
           <p>Graduating in July 2026.</p>
           <p>Open for Summer Internship in 2025 (19 May - 12 August).</p>

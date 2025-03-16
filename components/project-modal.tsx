@@ -55,7 +55,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
         {/* Image Carousel */}
         <div className="relative aspect-video bg-muted rounded-md overflow-hidden my-4">
           <Image
-            src={project.images[currentImageIndex].src || "/placeholder.svg"}
+            src={project.images[currentImageIndex].src || "/window.svg"}
             alt={project.images[currentImageIndex].alt}
             fill
             className="object-contain max-w-full max-h-full"
