@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Linkedin, Mail, Instagram, Youtube } from "lucide-react"
+import { Github, Linkedin, Mail, Youtube } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -12,23 +12,19 @@ export default function Footer() {
           </div>
 
           <div className="flex space-x-4 mb-4 md:mb-0">
-            <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="https://github.com/ShengBin-101" className="text-muted-foreground hover:text-foreground transition-colors">
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="https://www.linkedin.com/in/shengbinchan/" className="text-muted-foreground hover:text-foreground transition-colors">
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Instagram className="h-5 w-5" />
-              <span className="sr-only">Instagram</span>
-            </Link>
-            <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="https://www.youtube.com/@shengbin" className="text-muted-foreground hover:text-foreground transition-colors">
               <Youtube className="h-5 w-5" />
               <span className="sr-only">YouTube</span>
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="mailto:shengbin.chan@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors">
               <Mail className="h-5 w-5" />
               <span className="sr-only">Email</span>
             </Link>
