@@ -416,6 +416,7 @@ export default function Projects() {
                   layout="fill" // Ensures the image fills the container
                   objectFit="cover" // Ensures the image maintains aspect ratio and covers the container
                   priority={index === 0} // Optionally prioritize the first image for faster loading
+                  unoptimized={project.images[0].src.endsWith(".gif")} // Add unoptimized for .gif files
                 />
               ) : (
                 project.icon
