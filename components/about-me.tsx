@@ -1,6 +1,6 @@
 "use client"
 
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Youtube } from "lucide-react"
 
@@ -51,7 +51,7 @@ export default function AboutMe() {
             <Image
               src="/personal/hk.jpg"
               alt="Photo of Sheng Bin in Hong Kong"
-              fill
+              layout="fill"
               className="object-cover"
               priority
             />

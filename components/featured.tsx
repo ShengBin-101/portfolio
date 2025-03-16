@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -50,7 +50,7 @@ export default function Featured() {
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    fill
+                    layout="fill"
                     className="object-cover transition-transform hover:scale-105 duration-300"
                   />
                 </div>

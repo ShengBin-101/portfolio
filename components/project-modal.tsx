@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
@@ -54,12 +54,17 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
 
         {/* Image Carousel */}
         <div className="relative aspect-video bg-muted rounded-md overflow-hidden my-4">
-          <Image
-            src={project.images[currentImageIndex].src || "/window.svg"}
-            alt={project.images[currentImageIndex].alt}
-            fill
-            className="object-contain max-w-full max-h-full"
-          />
+          {project.images && project.images.length > 0 && project.images[0].src ? (
+            <Image
+              src={project.images[0].src}
+              alt={project.images[0].alt || "Project image"}
+              layout="fill"
+              objectFit="cover"
+              unoptimized={project.images[0].src.endsWith(".gif")}
+            />
+          ) : (
+            <div className="text-muted">No Image Available</div>
+          )}
 
           {project.images.length > 1 && (
             <>

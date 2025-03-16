@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import ProjectModal from "@/components/project-modal"
-import Image from "next/image"
+import Image from "next/legacy/image"
 
 // Define a custom Project interface for your portfolio
 interface PortfolioProject {
