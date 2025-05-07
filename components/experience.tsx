@@ -3,11 +3,24 @@ import { Calendar, Briefcase, Users, Tag, ExternalLink } from "lucide-react"
 export default function WorkExperience() {
   const workExperience = [
     {
+      company: "Speedcargo Technologies (SGInnovate Summation)",
+      role: "Computer Vision Engineer",
+      period: "May 2025 - Present",
+      location: "Singapore",
+      website: "https://speedcargo.sg/",
+      additionalInfo: [
+        "Done under an apprenticeship programme connecting top talents to Deep Tech projects.",
+        "Speedcargo Technologies brings innovative solutions that use computer vision technologies, advanced algorithms, artificial intelligence and robotics to transform the air cargo operations of Airlines and Ground Handlers.",
+      ],
+      responsibilities: [
+      ],
+    },
+    {
       company: "Bumblebee Autonomous Systems",
       role: "Robotics Engineer",
       period: "May 2024 - Present",
       location: "Singapore",
-      website: "https://bumblebee.sg", // Added website link
+      website: "https://bumblebee.sg",
       additionalInfo: [
         "Part of the Software Team, focusing on developing robot autonomy for our different robot platforms.",
         "Team Bumblebee is a competitive robotics team specialising in autonomous maritime systems, comprising students from multiple disciplines such as Mechanical Engineering, Electrical Engineering, Computer Engineering, and Computer Science.",

@@ -60,6 +60,32 @@ export default function Projects() {
       icon: <BookOpen className="h-10 w-10 text-primary" />,
     },
     {
+      title: "Real-Time Operating System (RTOS) for KL25Z",
+      description:
+        "Implemented a Real-Time Operating System (RTOS) on the KL25Z microcontroller for a project in the RTOS course (CG2271).",
+      longDescription: `
+        <p>This project involved implementing a Real-Time Operating System (RTOS) on the KL25Z microcontroller as part of the RTOS course (CG2271). The RTOS was designed to manage multiple tasks and ensure timely execution of critical functions.</p>
+        <p>Key features of the RTOS implementation:</p>
+        <ul>
+          <li>Task scheduling and management</li>
+          <li>Inter-task communication mechanisms</li>
+          <li>Real-time performance analysis</li>
+          <li>Integration with hardware peripherals</li>
+          <li>Debugging and testing methodologies</li>
+        </ul>
+        <p>The project provided hands-on experience with embedded systems programming and real-time constraints.</p>
+      `,
+      images: [
+        { src: "/project_images/cg2271.png", alt: "RTOS implementation on KL25Z" },
+      ],
+      category: "Completed",
+      completedDate: "April 2025",
+      tags: ["RTOS", "Embedded Systems", "KL25Z", "ESP32", "C"],
+      videoUrl: "https://www.youtube.com/watch?v=ZQhYvXszI0I", 
+      codeUrl: "https://github.com/ShengBin-101/cg2271-project",
+      icon: <Cpu className="h-10 w-10 text-primary" />,
+    },
+    {
       title: "Mellow - Conversational AI for Mental Health 🧠",
       description:
         "A conversational AI solution analyzing speech for workplace mental health insights. Built during a 36-Hour hackathon (NTU Deep Learning Week 2025).",
