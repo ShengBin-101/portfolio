@@ -37,17 +37,15 @@ export default function Projects() {
       title: "Gitbook 📚",
       description:
         "A collection of notes and resources for Robotics. I try to keep it updated with my learning journey in Robotics.",
-      longDescription: `
-        <p>This Gitbook serves as my personal knowledge base for robotics concepts, tutorials, and resources. I regularly update it with new information as I learn.</p>
-        <p>The content includes:</p>
-        <ul>
-          <li>ROS tutorials and best practices</li>
-          <li>Computer vision techniques for robotics</li>
-          <li>SLAM and navigation algorithms</li>
-          <li>Sensor fusion approaches</li>
-          <li>Code snippets and examples</li>
-        </ul>
-        <p>I created this resource to help myself and others in the robotics community have a centralized place for learning materials.</p>
+        longDescription: `
+        This Gitbook serves as my personal knowledge base for robotics concepts, tutorials, and resources.
+  
+        ## Key Features:
+        - ROS tutorials and best practices
+        - Computer vision techniques for robotics
+        - SLAM and navigation algorithms
+        - Sensor fusion approaches
+        - Code snippets and examples
       `,
       images: [
         { src: "/project_images/gitbook.png", alt: "Gitbook screenshot showing ROS tutorials" },

@@ -46,53 +46,58 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-w-4xl w-[90vw] max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-3xl w-[80vw] max-h-[85vh] overflow-y-auto p-6 shadow-lg rounded-lg">
         <DialogHeader>
-          <DialogTitle className="text-2xl">{project.title}</DialogTitle>
-          {project.completedDate && <DialogDescription>Completed on {project.completedDate}</DialogDescription>}
+          <DialogTitle className="text-3xl font-bold">{project.title}</DialogTitle>
+          {project.completedDate && (
+            <DialogDescription className="text-sm text-muted-foreground">
+              Completed on {project.completedDate}
+            </DialogDescription>
+          )}
         </DialogHeader>
 
-        {/* Image Carousel */}
-        <div className="relative aspect-video bg-muted rounded-md overflow-hidden my-4">
-          {project.images && project.images.length > 0 && project.images[0].src ? (
+        {/* Image Section */}
+        <div className="relative aspect-[16/9] bg-muted rounded-md overflow-hidden my-4 border border-primary shadow-md">
+          {project.images && project.images.length > 0 && project.images[currentImageIndex]?.src ? (
             <Image
-              src={project.images[0].src}
-              alt={project.images[0].alt || "Project image"}
+              src={project.images[currentImageIndex].src}
+              alt={project.images[currentImageIndex].alt || "Project image"}
               layout="fill"
               objectFit="cover"
-              unoptimized={project.images[0].src.endsWith(".gif")}
+              unoptimized={project.images[currentImageIndex].src.endsWith(".gif")}
             />
           ) : (
-            <div className="text-muted">No Image Available</div>
+            <div className="text-muted flex items-center justify-center h-full">
+              No Image Available
+            </div>
           )}
 
-          {project.images.length > 1 && (
+          {project.images && project.images.length > 1 && (
             <>
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90"
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-primary hover:bg-primary/90 p-2 rounded-full shadow-lg"
                 onClick={prevImage}
                 aria-label="Previous image"
               >
-                <ChevronLeft className="h-6 w-6" />
+                <ChevronLeft className="h-6 w-6 text-white" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90"
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-primary hover:bg-primary/90 p-2 rounded-full shadow-lg"
                 onClick={nextImage}
                 aria-label="Next image"
               >
-                <ChevronRight className="h-6 w-6" />
+                <ChevronRight className="h-6 w-6 text-white" />
               </Button>
 
-              {/* Image Indicators */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                 {project.images.map((_, index) => (
                   <button
                     key={index}
-                    className={`w-2 h-2 rounded-full ${
+                    className={`w-3 h-3 rounded-full ${
                       index === currentImageIndex ? "bg-primary" : "bg-background/60"
                     }`}
                     onClick={() => setCurrentImageIndex(index)}
@@ -104,19 +109,16 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
           )}
         </div>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-4">
+        {/* Tags Section */}
+        <div className="flex flex-wrap gap-2 mb-6">
           {project.tags.map((tag, index) => (
-            <span key={index} className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
+            <span
+              key={index}
+              className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium shadow-sm hover:bg-primary/20 transition-colors"
+            >
               {tag}
             </span>
           ))}
-        </div>
-
-        {/* Description */}
-        <div className="text-muted-foreground space-y-4">
-          <p>{project.description}</p>
-          {project.longDescription && <div dangerouslySetInnerHTML={{ __html: project.longDescription }} />}
         </div>
       </DialogContent>
     </Dialog>
