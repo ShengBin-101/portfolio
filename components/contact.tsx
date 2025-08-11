@@ -49,7 +49,7 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row gap-8 mb-8">
           <Button className="flex-1" asChild>
-            <a href="https://drive.google.com/file/d/1p4nZXdpTC1srV1a0GNf2cANz7kAaFLL3/view?usp=sharing" download>
+            <a href="https://drive.google.com/file/d/17T4aL8KHZ-UXfHR_BkNpQxw2bB5m3nN8/view?usp=sharing" download>
               <Download className="mr-2 h-4 w-4" />
               Download Resume
             </a>
