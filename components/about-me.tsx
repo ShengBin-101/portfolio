@@ -16,8 +16,7 @@ export default function AboutMe() {
           <p className="text-lg text-muted-foreground mb-8">
             Hey there! I&apos;m a Computer Engineering undergraduate student at National University of Singapore (NUS).
           </p>
-          <p>Graduating in July 2026.</p>
-          <p>Open for Summer Internship in 2025 (19 May - 12 August).</p>
+          <p>Graduating in July 2027.</p>
           <br />
           <ul className="space-y-2 mb-8">
             <li>Passionate in Robot Autonomy and Computer Vision.</li>
