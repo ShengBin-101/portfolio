@@ -3,19 +3,6 @@ import { Calendar, Briefcase, Users, Tag, ExternalLink } from "lucide-react"
 export default function WorkExperience() {
   const workExperience = [
     {
-      company: "Speedcargo Technologies (SGInnovate Summation)",
-      role: "Computer Vision Engineer",
-      period: "May 2025 - Present",
-      location: "Singapore",
-      website: "https://speedcargo.sg/",
-      additionalInfo: [
-        "Done under an apprenticeship programme connecting top talents to Deep Tech projects.",
-        "Speedcargo Technologies brings innovative solutions that use computer vision technologies, advanced algorithms, artificial intelligence and robotics to transform the air cargo operations of Airlines and Ground Handlers.",
-      ],
-      responsibilities: [
-      ],
-    },
-    {
       company: "Bumblebee Autonomous Systems",
       role: "Robotics Engineer",
       period: "May 2024 - Present",
@@ -26,6 +13,22 @@ export default function WorkExperience() {
         "Team Bumblebee is a competitive robotics team specialising in autonomous maritime systems, comprising students from multiple disciplines such as Mechanical Engineering, Electrical Engineering, Computer Engineering, and Computer Science.",
       ],
       responsibilities: [],
+    },
+    {
+      company: "Speedcargo Technologies",
+      role: "Computer Vision Engineer",
+      period: "May 2025 - Aug 2025 (3 months)",
+      location: "Singapore",
+      website: "https://speedcargo.sg/",
+      additionalInfo: [
+        "Done under SGInnovate Summation apprenticeship programme connecting top talents to Deep Tech projects.",
+        "Speedcargo Technologies brings innovative solutions that use computer vision technologies, advanced algorithms, artificial intelligence and robotics to transform the air cargo operations of Airlines and Ground Handlers.",
+      ],
+      responsibilities: [
+        "Developed advanced point cloud filtering techniques, enhancing product dimensioning accuracy for Cargo Eye.",
+        "Innovated an extrinsic calibration method for a multi-ToF camera setup, enabling precise camera alignment without the need for a calibration box.",
+        "Created a visual interactive tool for evaluating extrinsic calibration, streamlining validation and troubleshooting of multi-camera systems."
+      ],
     },
     {
       company: "DSO National Laboratories",
