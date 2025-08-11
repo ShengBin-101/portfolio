@@ -5,7 +5,7 @@ export default function Education() {
     {
       institution: "National University of Singapore",
       degree: "Bachelor of Engineering in Computer Engineering",
-      period: "2023 - 2026",
+      period: "2023 - 2027",
       achievements: ["NUS Merit Scholarship Recipient"],
       coCurricular: [
         "NUS Team Bumblebee - Software Engineer",
@@ -13,7 +13,7 @@ export default function Education() {
         "Hornet X Programme - Software Subteam Lead (Facilitator)",
         "Hornet 9.0 Programme - Perception/Localisation Lead",
       ],
-      notes: ["Graduating May 2026"],
+      notes: ["Graduating May 2027"],
     },
     {
       institution: "Ngee Ann Polytechnic",
