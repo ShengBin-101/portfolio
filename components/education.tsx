@@ -14,6 +14,7 @@ export default function Education() {
       coCurricular: [
         "NUS Team Bumblebee - Team Lead (Jan 2026 - Dec 2026)",
         "NUS Team Bumblebee - Software Engineer",
+        "NUS Team Bumblebee - RoboSub 2025 & 2026 Champions",
         "NUS Team Bumblebee - Maritime RobotX Challenge 2024 Champions",
         "Hornet X Programme - Software Subteam Lead (Facilitator)",
         "Hornet 9.0 Programme - Perception/Localisation Lead",
