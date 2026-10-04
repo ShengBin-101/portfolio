@@ -8,7 +8,7 @@ export default function Education() {
       period: "2023 - Jan 2027",
       achievements: ["NUS Merit Scholarship Recipient"],
       research: [
-        "Bachelor's Thesis: Transparent Object Grasping - NUS Advanced Robotics Centre, supervised by Prof Marcelo Ang",
+        "Bachelor's Thesis: Transparent Object Grasping - developing an end-to-end pipeline to estimate grasp poses for transparent and opaque objects for robotic grasping. NUS Advanced Robotics Centre, supervised by Prof Marcelo Ang.",
       ],
       courses: [],
       coCurricular: [

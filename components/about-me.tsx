@@ -23,7 +23,7 @@ export default function AboutMe() {
             <li>Team Lead of NUS Team Bumblebee (Jan 2026 - Dec 2026).</li>
             <li>
               Bachelor&apos;s thesis on Transparent Object Grasping at the NUS Advanced Robotics Centre, supervised by Prof
-              Marcelo Ang.
+              Marcelo Ang: building an end-to-end pipeline to estimate grasp poses for transparent and opaque objects.
             </li>
           </ul>
           <p className="mb-8 font-medium text-primary">
