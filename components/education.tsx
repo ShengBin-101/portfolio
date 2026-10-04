@@ -1,19 +1,34 @@
-import { Calendar, GraduationCap, Award, Users } from "lucide-react"
+import { Calendar, GraduationCap, Award, Users, BookOpen, FlaskConical } from "lucide-react"
 
 export default function Education() {
   const education = [
     {
       institution: "National University of Singapore",
       degree: "Bachelor of Engineering in Computer Engineering",
-      period: "2023 - 2027",
+      period: "2023 - Jan 2027",
       achievements: ["NUS Merit Scholarship Recipient"],
+      research: [
+        "Bachelor's Thesis: Transparent Object Grasping - NUS Advanced Robotics Centre, supervised by Prof Marcelo Ang",
+      ],
+      courses: [],
       coCurricular: [
+        "NUS Team Bumblebee - Team Lead (Jan 2026 - Dec 2026)",
         "NUS Team Bumblebee - Software Engineer",
         "NUS Team Bumblebee - Maritime RobotX Challenge 2024 Champions",
         "Hornet X Programme - Software Subteam Lead (Facilitator)",
         "Hornet 9.0 Programme - Perception/Localisation Lead",
       ],
-      notes: ["Graduating May 2027"],
+      notes: ["Graduating January 2027"],
+    },
+    {
+      institution: "Lund University (LTH)",
+      degree: "Exchange Programme, Faculty of Engineering",
+      period: "Aug 2025 - Jan 2026",
+      achievements: [],
+      research: [],
+      courses: ["Non-linear Optimisation", "Markov Chains", "Multi-variable Calculus", "Computer Architecture"],
+      coCurricular: [],
+      notes: [],
     },
     {
       institution: "Ngee Ann Polytechnic",
@@ -25,6 +40,8 @@ export default function Education() {
         "Placed on Dean's List (2019, 2020)",
         "Faculty Merit Award",
       ],
+      research: [],
+      courses: [],
       coCurricular: ["Archery Club - Team Captain"],
       notes: [],
     },
@@ -65,6 +82,34 @@ export default function Education() {
                 <ul className="list-disc list-inside text-muted-foreground ml-4 space-y-1">
                   {item.achievements.map((achievement, i) => (
                     <li key={i}>{achievement}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {item.research.length > 0 && (
+              <div className="mt-4">
+                <h4 className="font-medium flex items-center mb-2">
+                  <FlaskConical className="h-4 w-4 mr-2" />
+                  Research
+                </h4>
+                <ul className="list-disc list-inside text-muted-foreground ml-4 space-y-1">
+                  {item.research.map((entry, i) => (
+                    <li key={i}>{entry}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {item.courses.length > 0 && (
+              <div className="mt-4">
+                <h4 className="font-medium flex items-center mb-2">
+                  <BookOpen className="h-4 w-4 mr-2" />
+                  Courses Completed
+                </h4>
+                <ul className="list-disc list-inside text-muted-foreground ml-4 space-y-1">
+                  {item.courses.map((course, i) => (
+                    <li key={i}>{course}</li>
                   ))}
                 </ul>
               </div>

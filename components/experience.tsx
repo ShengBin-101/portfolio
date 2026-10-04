@@ -4,13 +4,27 @@ export default function WorkExperience() {
   const workExperience = [
     {
       company: "Bumblebee Autonomous Systems",
+      role: "Team Lead",
+      period: "Jan 2026 - Dec 2026",
+      location: "Singapore",
+      website: "https://bumblebee.sg",
+      additionalInfo: [
+        "Team Bumblebee is a competitive robotics team specialising in autonomous maritime systems, comprising students from multiple disciplines such as Mechanical Engineering, Electrical Engineering, Computer Engineering, and Computer Science.",
+      ],
+      responsibilities: [
+        "Leading the team's core team in developing autonomous vehicles for international robotics competitions.",
+        "Planning and executing the team's development, including sponsorships and internal operations.",
+        "Serving as the team's main point of contact with the institute.",
+      ],
+    },
+    {
+      company: "Bumblebee Autonomous Systems",
       role: "Robotics Engineer",
-      period: "May 2024 - Present",
+      period: "May 2024 - Dec 2025",
       location: "Singapore",
       website: "https://bumblebee.sg",
       additionalInfo: [
         "Part of the Software Team, focusing on developing robot autonomy for our different robot platforms.",
-        "Team Bumblebee is a competitive robotics team specialising in autonomous maritime systems, comprising students from multiple disciplines such as Mechanical Engineering, Electrical Engineering, Computer Engineering, and Computer Science.",
       ],
       responsibilities: [],
     },

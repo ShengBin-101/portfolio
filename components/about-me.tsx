@@ -12,16 +12,27 @@ export default function AboutMe() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Hi, I&apos;m <span className="text-primary">Sheng Bin</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground mb-6">Software Engineer | Student</h2>
+          <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground mb-6">Robotics Software Engineer | Student</h2>
           <p className="text-lg text-muted-foreground mb-8">
             Hey there! I&apos;m a Computer Engineering undergraduate student at National University of Singapore (NUS).
           </p>
-          <p>Graduating in July 2027.</p>
+          <p>Graduating in January 2027.</p>
           <br />
           <ul className="space-y-2 mb-8">
-            <li>Passionate in Robot Autonomy and Computer Vision.</li>
-            <li>I am also part of NUS Team Bumblebee as a Software Engineer.</li>
+            <li>Passionate in robotics perception and localisation, computer vision and C++.</li>
+            <li>Team Lead of NUS Team Bumblebee (Jan 2026 - Dec 2026).</li>
+            <li>
+              Bachelor&apos;s thesis on Transparent Object Grasping at the NUS Advanced Robotics Centre, supervised by Prof
+              Marcelo Ang.
+            </li>
           </ul>
+          <p className="mb-8 font-medium text-primary">
+            Open to internships from February to August 2027. Reach me at{" "}
+            <a href="mailto:shengbin.chan@gmail.com" className="underline">
+              shengbin.chan@gmail.com
+            </a>
+            .
+          </p>
           <div className="flex flex-wrap gap-4">
             <Button onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
               Contact Me

@@ -44,6 +44,13 @@ export default function Contact() {
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Feel free to reach out if you have any questions or would like to work together.
         </p>
+        <p className="text-muted-foreground max-w-2xl mx-auto mt-2">
+          I&apos;m open to internships from February to August 2027 — email me at{" "}
+          <a href="mailto:shengbin.chan@gmail.com" className="text-primary hover:underline">
+            shengbin.chan@gmail.com
+          </a>
+          .
+        </p>
       </div>
 
       <div className="max-w-4xl mx-auto">

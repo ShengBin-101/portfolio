@@ -1,7 +1,12 @@
-import { Code, Database, Layout, Cpu, PenToolIcon as Tool } from "lucide-react"
+import { Code, Database, Layout, Cpu, Eye, PenToolIcon as Tool } from "lucide-react"
 
 export default function Skills() {
   const skillCategories = [
+    {
+      title: "Robotics & Perception",
+      icon: <Eye className="h-8 w-8 text-primary" />,
+      skills: ["Computer Vision", "OpenCV", "LiDAR-Camera Perception", "Localisation", "Sensor Calibration", "Point Cloud Processing"],
+    },
     {
       title: "Languages",
       icon: <Code className="h-8 w-8 text-primary" />,

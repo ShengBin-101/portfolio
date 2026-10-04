@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
   title: "Sheng Bin - Portfolio",
-  description: "Software Engineer | Student",
+  description: "Robotics Software Engineer | Computer Engineering @ NUS | Team Lead, NUS Team Bumblebee",
 }
 
 export default function RootLayout({
