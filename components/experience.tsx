@@ -1,4 +1,4 @@
-import { Calendar, Briefcase, Users, Tag, ExternalLink } from "lucide-react"
+import { Calendar, Briefcase, Users, Tag, ExternalLink, Trophy } from "lucide-react"
 
 export default function WorkExperience() {
   const workExperience = [
@@ -10,8 +10,8 @@ export default function WorkExperience() {
       website: "https://bumblebee.sg",
       additionalInfo: [
         "Team Bumblebee is a competitive robotics team specialising in autonomous maritime systems, comprising students from multiple disciplines such as Mechanical Engineering, Electrical Engineering, Computer Engineering, and Computer Science.",
-        "Achievements: Led the team to 1st place at RoboSub 2026.",
       ],
+      achievements: ["Led the team to 1st place at RoboSub 2026"],
       responsibilities: [
         "Leading the team's core team in developing autonomous vehicles for international robotics competitions.",
         "Planning and executing the team's development, including sponsorships and internal operations.",
@@ -26,8 +26,8 @@ export default function WorkExperience() {
       website: "https://bumblebee.sg",
       additionalInfo: [
         "Part of the Software Team, focusing on developing robot autonomy for our different robot platforms.",
-        "Achievements: 1st place at RoboSub 2025.",
       ],
+      achievements: ["1st place at Maritime RobotX Challenge 2024", "1st place at RoboSub 2025"],
       responsibilities: [],
     },
     {
@@ -141,6 +141,20 @@ export default function WorkExperience() {
                 {item.additionalInfo.map((info, i) => (
                   <p key={i}>{info}</p>
                 ))}
+              </div>
+            )}
+
+            {item.achievements && item.achievements.length > 0 && (
+              <div className="mt-4">
+                <h4 className="font-medium flex items-center mb-2">
+                  <Trophy className="h-4 w-4 mr-2" />
+                  Achievements
+                </h4>
+                <ul className="list-disc list-inside text-muted-foreground ml-4 space-y-1">
+                  {item.achievements.map((achievement, i) => (
+                    <li key={i}>{achievement}</li>
+                  ))}
+                </ul>
               </div>
             )}
 
