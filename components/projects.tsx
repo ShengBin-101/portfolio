@@ -58,6 +58,59 @@ export default function Projects() {
       icon: <BookOpen className="h-10 w-10 text-primary" />,
     },
     {
+      title: "Maritime RobotX Challenge 2026 🚢",
+      description:
+        "As Team Lead, I led NUS Team Bumblebee to 1st place in the Autonomy Challenge at RobotX 2026 in Singapore. I planned and ran the team's campaign, coordinated testing and vehicle requirements across the software and hardware teams, and guided junior developers on localisation and perception for our autonomous surface vessel.",
+      longDescription: `
+        <p>The Maritime RobotX Challenge 2026 was held in Singapore, where 22 university teams from 10 countries took on a "Storm Response" theme requiring autonomous surface, underwater and aerial vehicles to work together. As Team Lead of NUS Team Bumblebee, I led the team to 1st place in the Autonomy Challenge, defending the title we won at RobotX 2024.</p>
+        <p>My role:</p>
+        <ul>
+          <li>Planning and executing the team's campaign, from manpower to logistics</li>
+          <li>Making key decisions with the software team on testing strategies</li>
+          <li>Working with the hardware team on vehicle requirements, tracking progress and adapting to changes</li>
+          <li>Managing the team's development timelines</li>
+          <li>Providing direction to junior software developers on localisation and perception for our autonomous surface vessel</li>
+        </ul>
+      `,
+      images: [
+        { src: "/project_images/rx26_win.jpg", alt: "NUS Team Bumblebee celebrating as RobotX 2026 Autonomy Challenge champions" },
+        { src: "/project_images/rx26_vessel_task.jpg", alt: "Team Bumblebee's autonomous vessel decoding the light sequence" },
+        { src: "/project_images/rx26_drone_drop.jpg", alt: "Team Bumblebee's drone dropping a green tin onto the target" },
+      ],
+      category: "Completed",
+      completedDate: "November 2026",
+      tags: ["Team Leadership", "Project Management", "Localisation", "Perception", "Autonomous Surface Vehicle"],
+      newsUrl: "https://www.zaobao.com.sg/news/singapore/story20261110-9977401",
+      infoUrl: "https://bumblebee.sg/competitions/robotx/2026/",
+      icon: <Ship className="h-10 w-10 text-primary" />,
+    },
+    {
+      title: "RoboSub 2026 🌊",
+      description:
+        "As Team Lead, I led NUS Team Bumblebee to 1st Place Overall at RoboSub 2026. I planned and ran the team's overseas campaign, from manpower to shipping, flights and accommodation, coordinated testing and vehicle requirements across the software and hardware teams, and guided junior developers on localisation and perception for our autonomous underwater vehicles.",
+      longDescription: `
+        <p>RoboSub is RoboNation's international autonomous underwater vehicle competition. As Team Lead of NUS Team Bumblebee, I led the team to 1st Place Overall and 1st Place Design Documentation at RoboSub 2026, along with the Best System Assessment, Best Video and Best Report awards. We competed with two vehicles, BBAUV 5.0 and BBAUV 4.5.</p>
+        <p>My role:</p>
+        <ul>
+          <li>Planning and executing the team's campaign, from manpower to shipping, flights and accommodation</li>
+          <li>Making key decisions with the software team on testing strategies</li>
+          <li>Working with the hardware team on vehicle requirements, tracking progress and adapting to changes</li>
+          <li>Managing the team's development timelines</li>
+          <li>Providing direction to junior software developers on localisation and perception for our autonomous underwater vehicles</li>
+        </ul>
+      `,
+      images: [
+        { src: "/project_images/rs26_win.webp", alt: "NUS Team Bumblebee celebrating as RoboSub 2026 champions" },
+        { src: "/project_images/rs26_auv45.webp", alt: "BBAUV 4.5 on the water surface" },
+        { src: "/project_images/rs26_auv_pool.webp", alt: "Team Bumblebee's AUV during pool testing" },
+      ],
+      category: "Completed",
+      completedDate: "July 2026",
+      tags: ["Team Leadership", "Project Management", "Localisation", "Perception", "Autonomous Underwater Vehicle"],
+      infoUrl: "https://bumblebee.sg/competitions/robosub/2026/",
+      icon: <Robot className="h-10 w-10 text-primary" />,
+    },
+    {
       title: "Real-Time Operating System (RTOS) for KL25Z",
       description:
         "Implemented a Real-Time Operating System (RTOS) on the KL25Z microcontroller for a project in the RTOS course (CG2271).",
@@ -144,7 +197,7 @@ export default function Projects() {
         "Raspberry Pi",
         "Python",
       ],
-      infoUrl: "https://cde.nus.edu.sg/ece/news-detail/nus-ceg-students-won-1st-place-in-the-sondra-challenge-2025/",
+      infoUrl: "https://cde.nus.edu.sg/ece/news/nus-ceg-students-won-1st-place-in-the-sondra-challenge-2025/",
       codeUrl: "https://github.com/ShengBin-101/sdr-pi5-vercel/tree/main",
       icon: <Monitor className="h-10 w-10 text-primary" />,
     },
@@ -523,6 +576,22 @@ export default function Projects() {
                 >
                   <a href={project.videoUrl} target="_blank" rel="noopener noreferrer">
                     Video
+                    <ArrowUpRight className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              )}
+              {project.newsUrl && (
+                <Button
+                  size="sm"
+                  variant="outline"
+                  asChild
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    window.open(project.newsUrl, "_blank")
+                  }}
+                >
+                  <a href={project.newsUrl} target="_blank" rel="noopener noreferrer">
+                    News
                     <ArrowUpRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>

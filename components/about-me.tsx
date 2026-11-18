@@ -22,8 +22,25 @@ export default function AboutMe() {
             <li>Passionate in robotics perception and localisation, computer vision and C++.</li>
             <li>Team Lead of NUS Team Bumblebee (Jan 2026 - Dec 2026).</li>
             <li>
-              Bachelor&apos;s thesis on Transparent Object Grasping at the NUS Advanced Robotics Centre, supervised by Prof
-              Marcelo Ang: building an end-to-end pipeline to estimate grasp poses for transparent and opaque objects.
+              Bachelor&apos;s thesis on Transparent Object Grasping at the{" "}
+              <a
+                href="https://arc.nus.edu.sg/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-primary hover:underline"
+              >
+                NUS Advanced Robotics Centre
+              </a>
+              , supervised by{" "}
+              <a
+                href="https://cde.nus.edu.sg/me/staff/ang-jr-marcelo-h/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-primary hover:underline"
+              >
+                Prof Marcelo Ang
+              </a>
+              : building an end-to-end pipeline to estimate grasp poses for transparent and opaque objects.
             </li>
           </ul>
           <p className="mb-8 font-medium text-primary">

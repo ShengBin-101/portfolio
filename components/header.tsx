@@ -70,6 +70,12 @@ export default function Header() {
             Featured
           </button>
           <button
+            onClick={() => scrollToSection("news")}
+            className="text-foreground/80 hover:text-foreground transition-colors"
+          >
+            News
+          </button>
+          <button
             onClick={() => scrollToSection("projects")}
             className="text-foreground/80 hover:text-foreground transition-colors"
           >
@@ -123,6 +129,12 @@ export default function Header() {
               className="py-2 text-foreground/80 hover:text-foreground transition-colors"
             >
               Featured
+            </button>
+            <button
+              onClick={() => scrollToSection("news")}
+              className="py-2 text-foreground/80 hover:text-foreground transition-colors"
+            >
+              News
             </button>
             <button
               onClick={() => scrollToSection("projects")}

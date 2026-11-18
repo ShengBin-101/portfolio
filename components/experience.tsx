@@ -11,9 +11,15 @@ export default function WorkExperience() {
       additionalInfo: [
         "Team Bumblebee is a competitive robotics team specialising in autonomous maritime systems, comprising students from multiple disciplines such as Mechanical Engineering, Electrical Engineering, Computer Engineering, and Computer Science.",
       ],
-      achievements: ["Led the team to 1st place at RoboSub 2026"],
+      achievements: [
+        "Led the team to 1st place at RoboSub 2026",
+        "Led the team to 1st place in the Autonomy Challenge at Maritime RobotX Challenge 2026 (Singapore)",
+      ],
       responsibilities: [
         "Leading the team's core team in developing autonomous vehicles for international robotics competitions.",
+        "Planning and executing competition campaigns, from manpower and logistics (shipping, flights and accommodation) to development timelines.",
+        "Working closely with the software team on testing strategies and with the hardware team on vehicle requirements, tracking progress and adapting to changes.",
+        "Providing direction to junior software developers on localisation and perception for our autonomous surface and underwater vehicles.",
         "Planning and executing the team's development, including sponsorships and internal operations.",
         "Serving as the team's main point of contact with the institute.",
       ],
@@ -27,7 +33,7 @@ export default function WorkExperience() {
       additionalInfo: [
         "Part of the Software Team, focusing on developing robot autonomy for our different robot platforms.",
       ],
-      achievements: ["1st place at Maritime RobotX Challenge 2024", "1st place at RoboSub 2025"],
+      achievements: ["1st place in the Autonomy Challenge at Maritime RobotX Challenge 2024", "1st place at RoboSub 2025"],
       responsibilities: [],
     },
     {
