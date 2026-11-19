@@ -20,7 +20,18 @@ export default function AboutMe() {
           <br />
           <ul className="space-y-2 mb-8">
             <li>Passionate in robotics perception and localisation, computer vision and C++.</li>
-            <li>Team Lead of NUS Team Bumblebee (Jan 2026 - Dec 2026).</li>
+            <li>
+              Team Lead of{" "}
+              <a
+                href="https://bumblebee.sg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-primary hover:underline"
+              >
+                NUS Team Bumblebee
+              </a>{" "}
+              (Jan 2026 - Dec 2026).
+            </li>
             <li>
               Bachelor&apos;s thesis on Transparent Object Grasping at the{" "}
               <a
